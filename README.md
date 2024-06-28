@@ -5,10 +5,32 @@ This application was built to help people stay organized and boost their product
 ## Features
 List the key features.
 - Add new tasks
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/a5e02deb-6e03-4bd9-b582-b888a98593f2)
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/86906b3e-9ac4-450b-bbb6-5068335c263e)
+  <br/>
+- Mark task as complete
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/9bc035d1-9543-4563-8891-fee964cb63eb)
+  <br/>
 - Delete task
-- Mark tasks as completed
-- Mark all tasks as completed
-- Delete all tasks
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/40293d8e-af74-4fa0-a16d-3854d6320d12)
+  <br/>
+- Showing total task need to be done.
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/9d769f1b-b259-4e13-91c6-17699f0f3251)
+  <br/>
+- Delete all task
+  <br/>
+![image](https://github.com/bellasintya/simple-to-do-list/assets/52004575/cbfc9681-297c-408a-8097-1d183c717604)
+  <br/>
+- Show message when all task complete
+  <br/>
+![Screenshot 2024-06-28 153622](https://github.com/bellasintya/simple-to-do-list/assets/52004575/132c2082-6622-4a13-900e-ed064abd4d50)
+  <br/>
+  
 
 ## Installation
 
