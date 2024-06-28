@@ -1,8 +1,8 @@
-#<h3>To Do List Application</h3>
+# <h3>To Do List Application</h3>
 <p>The To Do List Application is a simple, user-friendly tool for managing tasks. <br/>
 This application was built to help people stay organized and boost their productivity.</p>
 
-##Features
+## Features
 List the key features.
 - Add new tasks
 - Delete task
@@ -10,7 +10,7 @@ List the key features.
 - Mark all tasks as completed
 - Delete all tasks
 
-##Installation
+## Installation
 
 Copy code
 1. Clone the repository
@@ -21,7 +21,7 @@ Copy code
 2. Open the index.html file at your favorite browser
 
 
-##How to use the application.
+## How to use the application.
 
 1. Open the application in your browser.
 3. Use the input field to add new tasks.
@@ -31,7 +31,7 @@ Copy code
 7. Use the filter options to view all tasks, active tasks, or completed tasks.
 
    
-##Contributing
+## Contributing
 1. Fork the repository.
 2. Create a new branch.
     ```
@@ -48,4 +48,4 @@ Copy code
     ```
 6. Open a pull request.
 
-##For any questions or feedback, please contact [bellasd73@gmail.com](mailto:bellasd73@gmail.com).
+## For any questions or feedback, please contact [bellasd73@gmail.com](mailto:bellasd73@gmail.com).
