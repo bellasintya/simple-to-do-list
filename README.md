@@ -1,4 +1,4 @@
-# <h3>To Do List Application</h3>
+# <h2>To Do List Application</h2>
 <p>The To Do List Application is a simple, user-friendly tool for managing tasks. <br/>
 This application was built to help people stay organized and boost their productivity.</p>
 
@@ -48,4 +48,5 @@ Copy code
     ```
 6. Open a pull request.
 
-## For any questions or feedback, please contact [bellasd73@gmail.com](mailto:bellasd73@gmail.com).
+## For any questions or feedback
+Please contact [bellasd73@gmail.com](mailto:bellasd73@gmail.com).
