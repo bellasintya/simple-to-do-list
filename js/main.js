@@ -32,9 +32,9 @@ function renderTaskList() {
 
   todoList.map(function (item) {
     let label = document.createElement('label');
-    label.className = item.isDone ? 'task-item completed' : 'task-item';
+    label.className = item.isDone ? 'task-item text-decoration-line-through' : 'task-item';
     label.innerHTML = (`
-        <div class="inline-flex"> 
+        <div class="d-inline-flex"> 
           <input type="checkbox" name="check-task" id="id-${item.id}" onclick="completeTask(this)" ${item.isDone ? 'checked' : ''} />
           <span class="task-text">${item.taskText}</span>
         </div>
@@ -53,14 +53,14 @@ function renderFooterNote() {
 
   if (todoList.length > 0) {
     footerNote.innerHTML = (`
-      <p class="badge-note">need to be done 
+      <p class="badge-note mt-2">need to be done 
         <span class="badge-number">
           <span class="inner-number" id="totalPending"></span>
         </span>
       </p>
-      <div class="align-center">
-        <button id="deleteAllBtn" class="btn-delete-all mr-5" onclick="deleteAllTask()">Delete All</button>
-        <button id="markAllBtn" class="btn-mark-all mr-5" onclick="markAll()">Mark All as Done</button>  
+      <div class="align-self-center">
+        <button id="deleteAllBtn" class="btn-delete-all mr-5 btn btn-danger" onclick="deleteAllTask()">Delete All</button>
+        <button id="markAllBtn" class="btn-mark-all mr-5 btn btn-success" onclick="markAll()">Mark All as Done</button>  
       </div>
     `);
 

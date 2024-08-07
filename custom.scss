@@ -1,0 +1,535 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #020238;
+  background-image: url(../assets/img/bg-sky.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1vw;
+  background-attachment: fixed;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #3e372f;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+.card {
+    border: 0;
+}
+
+.todo-container {
+    min-width: 500px;
+    background-color: #DDE1E235;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),  
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),  
+                0 12.5px 10px rgba(0, 0, 0, 0.06),  
+                0 24.3px 17.9px rgba(0, 0, 0, 0.072),  
+                0 33.8px 32.4px rgba(0, 0, 0, 0.086),  
+                0 5px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    padding: 30px 40px 40px 35px;
+    margin: 90px auto;
+}  
+
+.btn {
+    border: 0;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.btn-delete-icon {
+    border: none;
+    border-radius: 0;
+    height: auto;
+    margin-top: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    background-size: 12px 14px;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,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);
+}
+
+.badge-note {
+    border: 1px solid black;
+    padding: 3px 16px 5px 10px;
+    font-size: 13px;
+    border-radius: 38px;
+    color: white;
+    background: black;
+    display: block;
+    position: relative;
+}
+  
+.badge-number {
+    border: 1px solid white;
+    display: inline-block;
+    position: absolute;
+    top: -3px;
+    width: fit-content;
+    min-width: 35px;
+    right: -25px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    background: white;
+    color: black;
+    font-size: 19px;
+}
+
+.inner-number {
+    display: block;
+    width: 31px;
+    height: 31px;
+    margin: 1px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    align-content: center;
+}
+
+
+$checkbox-size: 1.3em;
+$border-width: 0.15em;
+$checkmark-color: rgb(0, 111, 128);
+
+input[type="checkbox"] {
+  display: grid;
+  place-content: center;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  border: $border-width solid currentColor;
+  border-radius: $checkbox-size;
+  transform: translateY(-0.075em);
+
+  &::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: $checkmark-color;
+
+    /* checkmark */
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+
+  &:focus {
+    outline: max(2px, $border-width) solid currentColor;
+    outline-offset: max(2px, $border-width);
+  }
+}
+  
+
+.task-text {
+    min-width: 280px;
+    overflow-wrap: break-word;
+    margin-top: -1px;
+    margin-left: 10px;
+    word-spacing: 1px;
+    font-size: 13px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 95px;
+    background: #F9FAFA;
+    margin: 25px 0;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #F9FAFA;
+    border-bottom: solid 1px grey;
+  
+    &:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+  
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+      border-bottom: none;
+    }
+
+    &:only-child {
+        border-radius: 8px;
+        border-bottom: none;
+    }
+}
+
+.task-input {
+    border-radius: 8px;
+    border: solid 1px #fff;
+    min-width: 295px;
+    height: 32px;
+    padding: 0 10px;
+    background-color: #F9FAFA;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+.alert-small {
+    text-align: center;
+    height: 51px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    width: fit-content;
+    max-width: 90%;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background: rgb(18 201 155);
+    position: fixed;
+    top: 46px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Define the custom property --progress with the @property rule */
+@property --progress {
+    syntax: '<number>';
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes progress {
+    from {
+      --progress: 0;
+    }
+    to {
+      --progress: 1;
+    }
+  }
+  
+  .shape-container {
+    --PI: 3.1415;
+    --WAVE-COUNT: 2; /* Number of waves over the element's width */
+    --TOTAL-ANGLE: calc(var(--WAVE-COUNT) * 2 * var(--PI)); /* One wave is 2PI radians */
+    --UNIT: 1vw; /* Unit for all calculations */
+    --r: 5; /* Radius in --UNITs */
+    --CONTAINER-WIDTH: 100; /* Container's width in --UNITs */
+  
+    --x: calc(var(--progress) * var(--CONTAINER-WIDTH)); /* Current x-position in --UNITs */
+    --ROTATION-PER-LENGTH-UNIT: calc(var(--TOTAL-ANGLE) / var(--CONTAINER-WIDTH));
+    --alpha-reference-angle: calc(var(--ROTATION-PER-LENGTH-UNIT) * var(--x) * 1rad); /* Current angle */
+    --y: calc(-1 * var(--r) * sin(var(--alpha-reference-angle))); /* Current y-position in --UNITs */
+  
+    /* Apply units for CSS properties */
+    --x-with-unit: calc(var(--x) * var(--UNIT));
+    --y-with-unit: calc(var(--y) * var(--UNIT));
+  
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: calc(var(--CONTAINER-WIDTH) * var(--UNIT));
+    animation: progress 70s linear infinite;
+    z-index: 10;
+  }
+  
+  .shape {
+    --shape-width: 50px;
+    --shape-height: 10px;
+    position: absolute;
+    z-index: 5;
+    top: calc(-0.5 * var(--shape-height));
+    left: calc(-0.5 * var(--shape-width));
+    width: var(--shape-width);
+    height: var(--shape-height);
+    transform: translate(var(--x-with-unit), var(--y-with-unit)); /* Use transform for translation */
+  }
+  
+  /* Helper lines for demonstration */
+  .shape-container--with-indicators {
+    // border-top: 1px dotted hotpink;
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--r) * var(--UNIT));
+      width: 100%;
+      height: 0;
+      // border-top: 1px dotted #ccc;
+    }
+  
+    &::after {
+      top: calc(var(--r) * var(--UNIT));
+    }
+  }
+
+
+  /* Inspired by https://codepen.io/htgmanics/pen/nJwdl */
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    -moz-transform: rotate3d(0, 0, 0, 0deg);
+    -ms-transform: rotate3d(0, 0, 0, 0deg);
+    -o-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 720deg);
+    -moz-transform: rotate3d(0, 1, 0, 720deg);
+    -ms-transform: rotate3d(0, 1, 0, 720deg);
+    -o-transform: rotate3d(0, 1, 0, 720deg);
+    transform: rotate3d(0, 1, 0, 720deg);
+  }
+}
+@keyframes rotatingY {
+  100% {
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes fluttering {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  60% {
+    -webkit-transform: translate3d(0, 150px, 0);
+    -moz-transform: translate3d(0, 150px, 0);
+    -ms-transform: translate3d(0, 150px, 0);
+    -o-transform: translate3d(0, 150px, 0);
+    transform: translate3d(0, 150px, 0);
+  }
+  30%,
+  80% {
+    -webkit-transform: translate3d(0, 50px, 0);
+    -moz-transform: translate3d(0, 50px, 0);
+    -ms-transform: translate3d(0, 50px, 0);
+    -o-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+}
+@keyframes left-wing-flap {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+  }
+}
+@keyframes right-wing-flap {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+  }
+}
+
+.butterfly_container {
+  width: 100px;
+  height: 100px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.butterfly_container var {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.butterfly_container var.rotate3d {
+  -webkit-transform: rotate3d(1, 0.5, 0, 50deg);
+  -moz-transform: rotate3d(1, 0.5, 0, 50deg);
+  -ms-transform: rotate3d(1, 0.5, 0, 50deg);
+  -o-transform: rotate3d(1, 0.5, 0, 50deg);
+  transform: rotate3d(6, -20, 15, 120deg);
+}
+.butterfly_container var.translate3d {
+  -webkit-animation: fluttering 10s ease-in-out infinite;
+  -moz-animation: fluttering 10s ease-in-out infinite;
+  -ms-animation: fluttering 10s ease-in-out infinite;
+  -o-animation: fluttering 10s ease-in-out infinite;
+  animation: fluttering 10s ease-in-out infinite;
+}
+.butterfly_container figure.butterfly {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.butterfly_container figure.butterfly .wing {
+  position: absolute;
+  width: 35px;
+  height: 50px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+  -moz-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+  -ms-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+  -o-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+  transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+}
+.butterfly_container figure.butterfly .wing.right {
+  -webkit-transform-origin: 50px 50px;
+  -moz-transform-origin: 50px 50px;
+  -ms-transform-origin: 50px 50px;
+  -o-transform-origin: 50px 50px;
+  transform-origin: 35px 35px;
+  -webkit-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+  -moz-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+  -ms-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+  -o-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+  transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+  -webkit-animation: right-wing-flap 2s ease-in-out infinite;
+  -moz-animation: right-wing-flap 2s ease-in-out infinite;
+  -ms-animation: right-wing-flap 2s ease-in-out infinite;
+  -o-animation: right-wing-flap 2s ease-in-out infinite;
+  animation: right-wing-flap 2s ease-in-out infinite;
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.butterfly_container figure.butterfly .wing.left {
+  -webkit-transform-origin: 50px 50px;
+  -moz-transform-origin: 50px 50px;
+  -ms-transform-origin: 50px 50px;
+  -o-transform-origin: 50px 50px;
+  transform-origin: 35px 35px;
+  -webkit-animation: left-wing-flap 2s ease-in-out infinite;
+  -moz-animation: left-wing-flap 2s ease-in-out infinite;
+  -ms-animation: left-wing-flap 2s ease-in-out infinite;
+  -o-animation: left-wing-flap 2s ease-in-out infinite;
+  animation: left-wing-flap 2s ease-in-out infinite;
+}
+.butterfly_container figure.butterfly .wing use {
+  display: block;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  fill: url(#image);
+}
+
+.svg-defs {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
