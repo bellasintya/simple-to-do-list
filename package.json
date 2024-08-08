@@ -3,7 +3,7 @@
     "bootstrap": "^5.3.3"
   },
   "scripts": {
-    "start": "index.html",
+    "start": "node --watch index.js",
     "watch": "sass --watch custom.scss ./css/custom.css"
   }
 }
